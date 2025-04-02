@@ -6,7 +6,7 @@
 public class Uni5Exe03 {
     public static void main(String[] args) {
         double soma = 0;
-        for (int i = 1; i < 101; i++) {
+        for (double i = 1; i < 101; i++) {
             soma += (1/i);
         }
         System.out.println("Soma: " + soma);
