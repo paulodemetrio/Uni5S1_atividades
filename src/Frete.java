@@ -9,15 +9,16 @@ public class Frete {
         int op = scan.nextInt();
         switch (op) {
             case 1:
-                System.out.println("Altura da caixa: ");
+                System.out.println("Altura da caixa (cm): ");
                 double altCaixa = scan.nextInt();
-                System.out.println("Largura da caixa: ");
+                System.out.println("Largura da caixa (cm): ");
                 double largCaixa = scan.nextInt();
-                System.out.println("Comprimento da caixa: ");
+                System.out.println("Comprimento da caixa (cm): ");
                 double compCaixa = scan.nextInt();
-                System.out.println("Peso da caixa: ");
-                double pesoCaixa = scan.nextInt();
-                
+                double pesoCubico = compCaixa * largCaixa * altCaixa / 6000;
+                if (pesoCubico <= 300) {
+                    sla
+                }
                 break;
             case 2:
                 System.out.println("Altura do cilindro: ");
