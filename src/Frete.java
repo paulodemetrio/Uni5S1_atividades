@@ -17,7 +17,7 @@ public class Frete {
                 double compCaixa = scan.nextInt();
                 double pesoCubico = compCaixa * largCaixa * altCaixa / 6000;
                 if (pesoCubico <= 300) {
-                    sla
+                    String sla;
                 }
                 break;
             case 2:
