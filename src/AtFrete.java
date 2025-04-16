@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Frete {
+public class AtFrete {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         System.out.println("Qual o tipo de embalagem desejada?");
