@@ -10,8 +10,13 @@
 */
 public class Uni5Exe10 {
     public static void main(String[] args) {
-        for (int i = 0; i < 10000; i++) {
-            if (Math.sqrt(i) == )
+        for (int i = 1; i < 999999999; i++) {
+            int a = i / 100;
+            int b = i % 100;
+            int c = a + b;
+            if (c * c == i) {
+                System.out.println(i);
+            }
         }
     }
 }

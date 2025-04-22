@@ -2,19 +2,16 @@
 
 public class Uni5Exe11 {
     public static void main(String[] args) {
-        int quebraHora = 0;
-        int quebraAntes = 0;
-        for (int i = 1; i <= 16; i++) {
-            if (i == 1) {
-                quebraHora += 1;
-            } else if (i == 2) {
-                quebraHora += 3;
-                quebraAntes = quebraHora;
-            } else {
-                quebraHora = quebraHora + (quebraAntes * 3);
-            }
+        int quebraHora = 1;
+        int totalQuebrados = quebraHora;
+        int quebraAntes = quebraHora;
+
+        for (int i = 2; i <= 16; i++) {
+            quebraHora = quebraAntes * 3;
+            totalQuebrados += quebraHora;
+            quebraAntes = quebraHora;
         }
-        int totalQuebrados = quebraHora + quebraAntes;
+
         System.out.println("A quantidade de biscoitos quebrados será: " + totalQuebrados);
     }
 }
