@@ -20,14 +20,10 @@ public class Uni5Exe17 {
         double somaAltura = 0;
         int contadorAtletas = 0;
 
-        while (true) {
-            System.out.print("Digite o número de inscrição do atleta (ou 0 para sair): ");
-            numeroInscricao = scan.nextInt();
+        System.out.print("Digite o número de inscrição do atleta (ou 0 para sair): ");
+        numeroInscricao = scan.nextInt();
 
-            if (numeroInscricao == 0) {
-                break;
-            }
-
+        while (numeroInscricao != 0) {
             System.out.print("Digite a altura do atleta: ");
             altura = scan.nextDouble();
 
@@ -42,13 +38,14 @@ public class Uni5Exe17 {
             }
 
             somaAltura += altura;
-
             contadorAtletas++;
+
+            System.out.print("Digite o número de inscrição do atleta (ou 0 para sair): ");
+            numeroInscricao = scan.nextInt();
         }
 
         if (contadorAtletas > 0) {
             double mediaAltura = somaAltura / contadorAtletas;
-
             System.out.println("Atleta mais alto: Número de Inscrição " + atletaMaisAlto + ", Altura " + alturaMaisAlta);
             System.out.println("Atleta mais baixo: Número de Inscrição " + atletaMaisBaixo + ", Altura " + alturaMaisBaixa);
             System.out.printf("Altura média do grupo de atletas: " + mediaAltura);

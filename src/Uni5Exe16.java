@@ -4,37 +4,38 @@ import java.util.Scanner;
 
 public class Uni5Exe16 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        double altura, somaAlturaMulheres = 0, somaAlturaGrupo = 0;
-        int contadorMulheres = 0, contadorGrupo = 0;
+        double somaAlturaMulheres = 0; 
+        double somaAlturaGrupo = 0;    
+        int contadorMulheres = 0;      
+        int contadorGrupo = 0;         
 
-        while (true) {
-            System.out.print("Digite a altura da pessoa (ou 0 para sair): ");
-            altura = scan.nextDouble();
+        System.out.print("Digite a altura da pessoa (ou 0 para sair): ");
+        double altura = scanner.nextDouble();
 
-            if (altura == 0) {
-                break;
-            }
-
+        while (altura != 0) {
             System.out.print("Digite o gênero da pessoa (M/F/O): ");
-            char genero = scan.next().charAt(0);
+            char genero = scanner.next().charAt(0);
 
-            somaAlturaGrupo += altura;
-            contadorGrupo++;
+            somaAlturaGrupo += altura; 
+            contadorGrupo++;   
 
-            if (genero == 'F' || genero == 'f') {
+            if (genero == 'F' || genero == 'f') { 
                 somaAlturaMulheres += altura;
-                contadorMulheres++;
+                contadorMulheres++;          
             }
+
+            System.out.print("Digite a altura da pessoa (ou 0 para sair): ");
+            altura = scanner.nextDouble();
         }
 
-        double mediaAlturaGrupo = somaAlturaGrupo / contadorGrupo;
-        double mediaAlturaMulheres = (contadorMulheres > 0) ? (somaAlturaMulheres / contadorMulheres) : 0;
+        double mediaAlturaGrupo = contadorGrupo > 0 ? somaAlturaGrupo / contadorGrupo : 0;
+        double mediaAlturaMulheres = contadorMulheres > 0 ? somaAlturaMulheres / contadorMulheres : 0;
 
-        System.out.printf("Média de altura do grupo: %.2f\n", mediaAlturaGrupo);
-        System.out.printf("Média de altura das mulheres: %.2f\n", mediaAlturaMulheres);
+        System.out.println("Média de altura do grupo: " + mediaAlturaGrupo);
+        System.out.println("Média de altura das mulheres: " + mediaAlturaMulheres);
 
-        scan.close();
+        scanner.close();
     }
 }

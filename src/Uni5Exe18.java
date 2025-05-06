@@ -12,14 +12,10 @@ public class Uni5Exe18 {
         int pessoasCanal12 = 0;
         int totalPessoas = 0;
 
-        while (true) {
-            System.out.print("Digite o número do canal (4, 5, 9, 12 ou 0 para encerrar): ");
-            int canal = scan.nextInt();
+        System.out.print("Digite o número do canal (4, 5, 9, 12 ou 0 para encerrar): ");
+        int canal = scan.nextInt();
 
-            if (canal == 0) {
-                break;
-            }
-
+        while (canal != 0) {
             System.out.print("Digite o número de pessoas assistindo: ");
             int pessoas = scan.nextInt();
 
@@ -34,13 +30,16 @@ public class Uni5Exe18 {
             }
 
             totalPessoas += pessoas;
+
+            System.out.print("Digite o número do canal (4, 5, 9, 12 ou 0 para encerrar): ");
+            canal = scan.nextInt();
         }
 
         if (totalPessoas > 0) {
-            System.out.printf("Percentual de audiência do canal 4: %.2f%%\n", (pessoasCanal4 * 100.0) / totalPessoas);
-            System.out.printf("Percentual de audiência do canal 5: %.2f%%\n", (pessoasCanal5 * 100.0) / totalPessoas);
-            System.out.printf("Percentual de audiência do canal 9: %.2f%%\n", (pessoasCanal9 * 100.0) / totalPessoas);
-            System.out.printf("Percentual de audiência do canal 12: %.2f%%\n", (pessoasCanal12 * 100.0) / totalPessoas);
+            System.out.println("Percentual de audiência do canal 4: " + (pessoasCanal4 * 100 / totalPessoas) + "%");
+            System.out.println("Percentual de audiência do canal 5: " + (pessoasCanal5 * 100 / totalPessoas) + "%");
+            System.out.println("Percentual de audiência do canal 9: " + (pessoasCanal9 * 100 / totalPessoas) + "%");
+            System.out.println("Percentual de audiência do canal 12: " + (pessoasCanal12 * 100 / totalPessoas) + "%");
         } else {
             System.out.println("Nenhuma audiência registrada.");
         }

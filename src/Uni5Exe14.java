@@ -42,9 +42,9 @@ public class Uni5Exe14 {
         System.out.println("Mercadorias com lucro menor que 10%: " + lucroMenor10);
         System.out.println("Mercadorias com lucro entre 10% e 20%: " + lucroEntre10e20);
         System.out.println("Mercadorias com lucro maior que 20%: " + lucroMaior20);
-        System.out.println("Valor total de compra: R$ " + String.format("%.2f", totalCompra));
-        System.out.println("Valor total de venda: R$ " + String.format("%.2f", totalVenda));
-        System.out.println("Lucro total: R$ " + String.format("%.2f", lucroTotal));
+        System.out.println("Valor total de compra: R$ " + totalCompra);
+        System.out.println("Valor total de venda: R$ " + totalVenda);
+        System.out.println("Lucro total: R$ " + lucroTotal);
 
         scanner.close();
     }
